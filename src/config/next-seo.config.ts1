@@ -1,0 +1,34 @@
+const seoConfig = {
+  meta: {
+    charSet: 'utf-8',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IE',
+    title: 'Open Graph Title',
+    description: 'Resume for Richard Torcato',
+    site_name: 'Resume - Richard Torcato',
+    //url:
+    images: [
+      {
+        url: 'https://www.example.ie/og-image.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt',
+      },
+      {
+        url: 'https://www.example.ie/og-image-2.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt 2',
+      },
+    ],
+  },
+  twitter: {
+    handle: '@rtorcato',
+    site: '@site',
+    cardType: 'summary_large_image',
+  },
+}
+
+export default seoConfig

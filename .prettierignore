@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build
+_static
+coverage
+.cache
+.github
+.vscode
+node_modules
+.next
+OLD
+.storybook

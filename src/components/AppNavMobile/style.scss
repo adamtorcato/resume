@@ -1,0 +1,114 @@
+@import './../../styles/vars';
+$border-color: $gray-200 !default;
+$gray-200: #f1f4f8 !default;
+$list-group-border-color: $border-color !default;
+$list-group-item-padding-y: 1.5rem !default;
+$list-group-item-padding-x: 2rem !default;
+/*body.navMobile-visible .navMobile {
+  transform: translateX(0);
+}*/
+.navMobile {
+  position: fixed;
+  display: block;
+  left: 0;
+  background-color: #f3f7fa;
+  // background: #181920;
+  border-radius: 0 0 0.375rem 0;
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.15);
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  // max-height: calc(100vh - 2rem);
+  z-index: $zNavMobile;
+  height: 100vh; // auto
+  touch-action: 'pan-y';
+  width: 100%;
+  padding: 2rem 0 140px;
+  transform: translateX(-100%);
+  .nav-links {
+    svg {
+      display: none;
+      @media screen and (max-width: 320) {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (min-width: $small) {
+    max-width: 400px;
+  }
+
+  &.active {
+    transform: translateX(0);
+    // left: 1rem;
+    // right: 1rem;
+  }
+  a,
+  .btn-text {
+    text-align: center;
+    @media screen and (min-width: $small) {
+      text-align: left;
+    }
+  }
+
+  .navmobile-icon {
+    text-align: center;
+    margin-right: 1rem;
+  }
+}
+
+.navMobile .navMobile-ul {
+  padding: 0;
+  margin: 0;
+}
+.navMobile .navMobile-ul li {
+  list-style: none;
+}
+.navMobile .navMobile-ul li.active > a {
+  color: #ffffff;
+}
+.navMobile .navMobile-ul a {
+  border-bottom: none !important;
+  padding: 7px 0;
+  display: block;
+  // color: #ccc;
+  color: rgba(255, 255, 255, 0.5);
+}
+.navMobile .navMobile-ul a:hover {
+  color: white;
+}
+.navMobile .navMobile-ul .sub-ddown {
+  position: relative;
+}
+.navMobile .navMobile-ul .sub-ddown:after {
+  // font-family: 'themify';
+  // speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  margin-top: 2px;
+  content: '\e64b';
+}
+.navMobile .navMobile-ul .sub-menu {
+  //display: none;
+  padding-left: 20px;
+}
+.navMobile .navMobile-ul .sub-menu li {
+  list-style: none;
+}
+
+.list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,48 @@
+@import './../../styles/vars';
+
+.resumeContent {
+  flex: 1;
+  padding: 0;
+  height: 100%;
+  border-right: none;
+  ul {
+    padding: 0 0 0 1rem;
+  }
+  @media screen and (min-width: $medium) {
+    padding: inherit;
+  }
+
+  @media screen and (min-width: $medium) {
+    padding: 0 5rem 5rem;
+    padding-top: 20px;
+  }
+  @media screen and (min-width: $large) {
+    border-right: 1px solid #f1f4f8;
+  }
+}
+.resumeSideBarContainerR,
+.resumeSideBarContainerL {
+  display: none;
+  height: 100%;
+  flex: 0 0 250px;
+}
+.resumeSideBarContainerL {
+  border-right: 1px solid #f1f4f8;
+}
+.resumeSideBarContainerR {
+  @media screen and (min-width: $large) {
+    display: flex;
+  }
+  .rightSideNav-content {
+    z-index: $zResumeSideBar;
+    padding: 2rem 1rem;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+  }
+}
+.resumeSideBarContainerL {
+  @media screen and (min-width: $xlarge) {
+    // display:block;
+  }
+}

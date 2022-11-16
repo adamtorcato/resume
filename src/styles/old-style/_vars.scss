@@ -1,0 +1,73 @@
+// Custom variables
+@import 'user-variables';
+
+// Theme variables
+@import 'theme/variables';
+
+$path-to-img: './img';
+
+$topNavHeight: 105px;
+$topNavHeightMobile: 83px;
+
+$xlarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+$xsmall: 576px;
+
+$textDark: #506690;
+$footerLinkColor: #abbcd5;
+
+// z-index
+$zAppOverlay: 1048;
+$zMainNav: 1050;
+$zNavMobile: 1049;
+$zFooter: 1000;
+$zScrollToTop: 1040;
+$zResumeSideBar: 900;
+$zNavBarOverlay: 1002;
+$zNavBarSubMenuItem: 1003;
+
+:root {
+  /* CSS Custom Properties */
+  --header-height: 121px;
+  --xlarge: 1200px;
+  --large: 992px;
+  --medium: 768px;
+  --small: 576px;
+  --xsmall: 576px;
+  /* z-index */
+  --zIndexTopMenu: 100;
+  --zIndexMobileMenu: 101;
+  --sColor: aqua;
+}
+
+$pageSidePad: 2rem;
+$pageTopPad: 1.875rem;
+$pageBottomPad: 1.875rem;
+/*
+Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium devices (tablets, 768px and up)
+@media (min-width: var(--medium)) { ... }
+
+Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+/* theme.css 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+     --primary-color: #325b97;
+     --secondary-color: #9cafeb;
+     --font-color: #e1e1ff;
+     --bg-color: #000013;
+     --heading-color: #818cab;
+    }
+   }
+   */

@@ -1,0 +1,70 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint":true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "explorer.compactFolders": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.formatOnSave": true,
+    "search.exclude": {
+      "**/.github": true,
+      "**/build": true,
+      "**/node_modules": true,
+      "**/yarn-error.log": true,
+      "**/yarn.lock": true
+    },
+    
+    "typescript.tsdk": "node_modules/typescript/lib",
+      "better-comments.tags": [
+        {
+          "tag": "!",
+          "color": "#FF2D00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "//",
+          "color": "#474747",
+          "strikethrough": true,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "todo",
+          "color": "#FF8C00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "*",
+          "color": "#98C379",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        }
+      ]
+  }

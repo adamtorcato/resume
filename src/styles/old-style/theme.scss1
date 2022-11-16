@@ -1,0 +1,272 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. 
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+*/
+
+/**
+ * Custom variables followed by theme variables followed by Bootstrap variables
+ * to ensure cascade of styles.
+ */
+
+// Bootstrap functions
+@import '../../node_modules/bootstrap/scss/functions';
+
+@import '_vars';
+// Theme functions
+@import 'theme/functions';
+
+// Bootstrap core
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Theme core
+@import 'theme/theme';
+
+// Custom core
+@import 'user';
+
+/* css */
+html {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  background: $dark !important;
+}
+#___gatsby {
+  background: white;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+}
+
+.btn-scroll-to-top {
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.pull-right {
+  float: right;
+  margin-right: 0;
+}
+
+.print-show {
+  display: none;
+}
+@media print {
+  .print:hidden {
+    display: none !important;
+  }
+  .print-show {
+    display: block !important;
+  }
+}
+
+@media print {
+  .pagebreak {
+    page-break-before: always;
+  } /* page-break-after works, as well */
+}
+
+.backgroundRed {
+  background: rgb(255, 0, 0);
+}
+
+#mobile {
+  height: 667px;
+  width: 375px;
+  background: #c6c4c1;
+  position: relative;
+  margin: 30px auto;
+  @include box-shadow(0px 0px 20px 0px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+}
+
+#mobileBodyContent {
+  background: #f8f7f5;
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: visible;
+  @include transition(all 0.3s ease-in);
+}
+
+#header {
+  height: 60px;
+  background: #eae8e5;
+}
+
+#image {
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+#title {
+  height: 20px;
+  width: 200px;
+  margin: 40px auto;
+  background: #eae8e5;
+}
+
+#text .item {
+  height: 10px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  background: #eae8e5;
+}
+
+#nav {
+  position: absolute;
+  z-index: 10;
+  list-style-type: none;
+  margin: 100px 0 0 20px;
+  padding: 0;
+  overflow: hidden;
+  li {
+    height: 30px;
+    width: 0;
+    margin: 30px 0;
+    background: #eae8e5;
+    transition: all 0.6s ease-in;
+    & + li {
+      margin-left: -40px;
+      & + li {
+        margin-left: -80px;
+        & + li {
+          margin-left: -120px;
+        }
+      }
+    }
+  }
+}
+
+#demoSelector {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 333px;
+  left: 50%;
+  margin-left: 227px;
+  li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 5px;
+      background: #d8d5d0;
+      left: 0;
+      top: 18px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border-radius: 12px;
+      border: 2px solid #888888;
+      left: -6px;
+      top: 12px;
+      transform: scale(0);
+      transition: all 0.3s ease-in;
+    }
+    &.active:before {
+      transform: scale(1);
+    }
+  }
+}
+
+.navigation {
+  #nav li {
+    width: 200px;
+    margin-left: 0;
+  }
+}
+
+.demo1.navigation {
+  #mobileBodyContent {
+    transform: scale(0.85);
+    margin-left: 260px;
+  }
+}
+
+.demo2.navigation {
+  #mobileBodyContent {
+    margin-left: 320px;
+    opacity: 0.4;
+  }
+}
+
+.demo3.navigation {
+  #mobileBodyContent {
+    opacity: 0;
+    transform: scale(0.85);
+    visibility: hidden;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+a,
+a:visited,
+.btn-text {
+  transition: color 0.3s ease-in;
+  text-decoration: none;
+}
+a:hover,
+.btn-text:hover {
+  color: $dark;
+  text-decoration: none;
+  &.darkMode {
+    color: white;
+  }
+}
+
+.btn-text {
+  color: $primary;
+  border: transparent !important;
+  background: none;
+}

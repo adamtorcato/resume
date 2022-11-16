@@ -1,0 +1,103 @@
+/* purgecss start ignore */
+/* @tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+/* @tailwind utilities;  */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+} */
+
+@layer base {
+  :root {
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 199, 210, 254;
+    --color-text-inverted: 79, 70, 229;
+    --color-fill: 67, 56, 202;
+    --color-button-accent: 255, 255, 255;
+    --color-button-accent-hover: 238, 242, 255;
+    --color-button-muted: 99, 102, 241;
+  }
+  .theme-swiss {
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 254, 202, 202;
+    --color-text-inverted: 220, 38, 38;
+    --color-fill: 185, 28, 28;
+    --color-button-accent: 255, 255, 255;
+    --color-button-accent-hover: 254, 242, 242;
+    --color-button-muted: 239, 68, 68;
+  }
+  .theme-neon {
+    --color-text-base: 17, 24, 2;
+    --color-text-muted: 47, 67, 6;
+    --color-text-inverted: 235, 250, 204;
+    --color-fill: 179, 255, 23;
+    --color-button-accent: 36, 52, 3;
+    --color-button-accent-hover: 55, 79, 5;
+    --color-button-muted: 212, 255, 122;
+  }
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
