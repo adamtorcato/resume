@@ -3,11 +3,11 @@ import { AppContext, footerVisibleAction } from 'state/context/appContext'
 import Footer from './styled'
 import React from 'react'
 import { SiteIcons } from '@app/components/icons/SiteIcon'
-import SocialLinks from './socialLinks'
+// import SocialLinks from './socialLinks'
 import { attachments } from '@app/models/attachments'
 import { handlePrint, withAppPath } from 'utils'
 import siteConfig from '@app/config'
-import { sitePaths } from '@app/models/paths'
+// import { sitePaths } from '@app/models/paths'
 import { useIntersection } from 'react-use'
 
 const AppFooter = (): JSX.Element => {
@@ -32,8 +32,8 @@ const AppFooter = (): JSX.Element => {
         <div className="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-5 xl:gap-8">
           <div className="col-span-2 mt-8 space-y-4 xl:col-span-2 lg:mt-0">
             <img src={withAppPath('/img/richardtorcato.svg')} alt="Richard Torcato" className="mb-1 img-fluid" />
-            <p>Senior Full Stack Application Developer</p>
-            <SocialLinks />
+            <p>Senior Construction Project Manager</p>
+            {/* <SocialLinks /> */}
           </div>
           <Footer.FooterBox className="col-span-5 mt-8 lg:col-span-1 lg:mt-0">
             <h3>Documents</h3>
@@ -58,7 +58,7 @@ const AppFooter = (): JSX.Element => {
               </li>
             </ul>
           </Footer.FooterBox>
-          <Footer.FooterBox className="col-span-5 mt-8 lg:col-span-1 lg:mt-0">
+          {/* <Footer.FooterBox className="col-span-5 mt-8 lg:col-span-1 lg:mt-0">
             <h3>Links</h3>
             <ul>
               <li>
@@ -75,7 +75,7 @@ const AppFooter = (): JSX.Element => {
                 <a href={sitePaths.tripstreamer}>www.tripstreamer.com</a>
               </li>
             </ul>
-          </Footer.FooterBox>
+          </Footer.FooterBox> */}
           <Footer.FooterBox className="col-span-5 mt-8 lg:col-span-1 lg:mt-0">
             <h3>Contact</h3>
             <ul>

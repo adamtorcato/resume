@@ -4,7 +4,8 @@ import { handlePrint } from '@app/utils'
 import WebLink from '@app/components/WebLink'
 import GhostButton from '@app/components/buttons/GhostButton'
 import { PaperClipIcon } from '@heroicons/react/solid'
-import { PrinterIcon, ExternalLinkIcon, PhotographIcon } from '@heroicons/react/outline'
+// import { PrinterIcon, ExternalLinkIcon, PhotographIcon } from '@heroicons/react/outline'
+import { PrinterIcon } from '@heroicons/react/outline'
 
 const SideNavLinks: FC = () => {
   return (
@@ -24,26 +25,26 @@ const SideNavLinks: FC = () => {
         </ul>
       </div>
       <ul className="my-5">
-        <li>
+        {/* <li>
           <a href="https://www.matrixdigital.com/portfolio">
             <GhostButton className="flex justify-center w-full px-1">
               <PhotographIcon className="w-5 h-5 mr-2" aria-hidden="true" />
               View Work Portfolio
             </GhostButton>
           </a>
-        </li>
+        </li> */}
         <li className="my-3">
           <GhostButton className="flex justify-center w-full px-1" onClick={handlePrint}>
             <PrinterIcon className="w-5 h-5 mr-2" aria-hidden="true" />
             Print Resume
           </GhostButton>
         </li>
-        <a href="https://www.matrixdigital.com">
+        {/* <a href="https://www.matrixdigital.com">
           <GhostButton className="flex justify-center w-full px-1">
             <ExternalLinkIcon className="w-5 h-5 mr-2" aria-hidden="true" />
             Visit Matrix Digital Solutions
           </GhostButton>
-        </a>
+        </a> */}
       </ul>
     </>
   )

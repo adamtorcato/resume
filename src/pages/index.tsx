@@ -14,7 +14,7 @@ const IndexPage: IPage<IProps> = () => {
   return (
     <>
       <NextHead>
-        <title>Resume - Richard Torcato</title>
+        <title>Resume - Adam Torcato</title>
         <link rel="icon" href="/favicon.ico" />
       </NextHead>
       <ResumeScreen />
